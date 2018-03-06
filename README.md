@@ -1,3 +1,7 @@
+# MPI Tutorial
+
+http://mpitutorial.com/tutorials/mpi-introduction/
+
 # Parallel-Computing-MIP-Collective-Ops
 Implementation of MPI Collective Operations from the scratch
 
