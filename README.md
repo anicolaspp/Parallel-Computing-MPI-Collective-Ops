@@ -7,10 +7,23 @@ Implementation of MPI Collective Operations from the scratch
 This goal of this assignment is to practice MPI programming and to design collective operations by hand (using point-to-point MPI operations).
 
 # Details:
-You are asked to implement two functions: ***add_all()*** and ***collect_all()***:
-The following function is a collective operation; that is, it shall be called by all mpi processes or none at all. (Use MPI_COMM_WORLD.) Each process is expected to provide an integer 'x', and the function returns the total sum for the process whose rank is 'root'. The return value of all other processes is zero. */
+You are asked to implement two functions: ***add_all()*** and ***collect_all()*** :
+
+The following function is a collective operation; that is, it shall be called by all mpi processes or none at all. (Use ***MPI_COMM_WORLD***.) 
+Each process is expected to provide an integer 'x', and the function returns the total sum for the process whose rank is ***root***. The return value of all other processes is zero. 
+
+The function signature should be:
+```
 int add_all(int x, int root);
-/* The following function is a collective operation; that is, it shall be called by all mpi processes or none at all. (Use MPI_COMM_WORLD.) Each process is expected to provide a block of data of size 'sendcnt' stored in 'sendbuf'. When the function returns, each process will have the data blocks sent from all other processes (including itself) stored in 'recvbuf'. recvbuf will be an array of pointers to the received data (the function is in charge of allocating the array and the buffer for the received data). recvcnt is an array storing the size of the data. Again, the function is responsible for allocating the array. More specifically, the data from the i-th process is received by every process and placed in the i-th element of the 'recvbuf' and its size is put in the i-th element of 'recvcnt'. One must not assume that all processes would provide the same 'sendcnt'. 
+```
+
+The following function is a collective operation; that is, it shall be called by all mpi processes or none at all. (Use MPI_COMM_WORLD.) 
+
+Each process is expected to provide a block of data of size ***sendcnt*** stored in ***sendbuf***. 
+
+When the function returns, each process will have the data blocks sent from all other processes (including itself) stored in ***recvbuf***. ***recvbuf*** will be an array of pointers to the received data (the function is in charge of allocating the array and the buffer for the received data). ***recvcnt*** is an array storing the size of the data. 
+
+Again, the function is responsible for allocating the array. More specifically, the data from the i-th process is received by every process and placed in the i-th element of the ***recvbuf*** and its size is put in the i-th element of ***recvcnt***. One must not assume that all processes would provide the same ***sendcnt***. 
 
 ```
 void collect_all(char* sendbuf, int sendcnt, char** recvbuf, int* recvcnt);
