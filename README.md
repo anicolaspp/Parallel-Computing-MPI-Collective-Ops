@@ -60,6 +60,6 @@ To implement the two functions above, you are only allowed to use ***MPI*** poin
 
 # IMPORTANT:
 
-For ***add_all()***, you should use the binomial tree. For ***collect_all()***, you should use the hypercube. 
+For ***add_all()*** , you should use the binomial tree. For ***collect_all()***, you should use the hypercube. 
 You may assume that the number of ***MPI*** processes must be a power of two for ***collect_all()***.
 For ***add_all()***, there can be an arbitrary number of ***MP***I processes (not necessarily power of two).
