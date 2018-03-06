@@ -1,0 +1,1 @@
+//// Created by Nicolas A Perez on 2/11/18.//#ifndef HOMEWORK2_COLLECTIVE_COLLECT_ALL_H#define HOMEWORK2_COLLECTIVE_COLLECT_ALL_Hvoid collect_all(char* sendbuf, int sendcnt, char** recvbuf, int* recvcnt);#endif //HOMEWORK2_COLLECTIVE_COLLECT_ALL_H
